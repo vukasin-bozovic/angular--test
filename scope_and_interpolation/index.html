@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
 <head>
 
@@ -12,18 +12,18 @@
     <title>Heroic Features - Start Bootstrap Template</title>
 
 
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-messages/angular-messages.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-resource/angular-resource.min.js"></script>
 
     <script type="text/javascript" src="app.js"></script>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
 
     <!-- Custom CSS -->
-    <link href="assets/css/heroic-features.css" rel="stylesheet">
+    <link href="../assets/css/heroic-features.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,11 +69,11 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" ng-controller="mainController">
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <h1>Welcome!</h1>
+            <h1>Welcome {{name}}!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
             <p><a class="btn btn-primary btn-large">Call to action!</a>
             </p>
@@ -162,10 +162,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
 
