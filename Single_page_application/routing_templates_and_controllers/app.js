@@ -15,6 +15,11 @@ myApp.config(function ($routeProvider) {
        controller: 'secondController'
    })
 
+   .when('/second/:num', {
+       templateUrl: 'pages/second.html',
+       controller: 'secondController'
+   })
+
 });
 
 myApp.controller('firstController', ['$scope','$log','$location', function ($scope, $log, $location) {
@@ -25,10 +30,15 @@ myApp.controller('firstController', ['$scope','$log','$location', function ($sco
 
 }]);
 
-myApp.controller('secondController', ['$scope', '$log', '$location', function($scope, $log, $location){
+myApp.controller('secondController', ['$scope', '$log', '$location', '$routeParams', function($scope, $log, $location, $routeParams){
 
     $log.info($location.path());
-
     $scope.name = 'Second';
+
+    $scope.num = $routeParams.num || 100;
+
+
+
+
 
 }]);
