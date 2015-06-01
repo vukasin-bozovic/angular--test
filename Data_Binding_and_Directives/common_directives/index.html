@@ -76,11 +76,29 @@
         <div>
             <label for="handle">What is your twitter handle?</label>
             <input type="text" id="handle" ng-model="handle"/>
+
+            <div class="alert" ng-class="{ 'alert-warning' : handle.length < characters, 'alert-danger': handle.length > characters }" ng-if="handle.length !== characters">
+
+
+                <div ng-show="handle.length < characters">
+                    You have less then 5 numbers!
+                </div>
+
+                <div ng-hide="handle.length < 5">
+                    You have more then 5 numbers!
+                </div>
+            </div>
+
+
         </div>
 
-
-
         <hr/>
+
+        <h3 >Rules</h3 >
+        <ul>
+            <li ng-repeat="rule in rules">{{rule.rulename}}</li>
+        </ul>
+
         <h1>twitter.com/{{ lowerCaseHandle() }}</h1>
     </header>
 
