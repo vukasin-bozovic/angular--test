@@ -10,6 +10,8 @@ myApp.controller('mainController', ['$scope', '$filter', '$log', function($scope
 
     $scope.characters = 5;
 
+    $scope.name = "Vukasin";
+
     $scope.lowerCaseHandle = function(){
         return $filter("lowercase")($scope.handle);
     };
@@ -22,5 +24,7 @@ myApp.controller('mainController', ['$scope', '$filter', '$log', function($scope
 
     ];
 
-
+    $scope.alertClick = function(){
+        alert("Clicked!");
+    }
 }]);
