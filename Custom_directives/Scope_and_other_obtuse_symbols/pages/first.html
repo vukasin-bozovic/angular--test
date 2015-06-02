@@ -1,4 +1,5 @@
 <search-result person-name="{{ person.name }} "  person-address=" {{ person.address }} "></search-result>
 
-<search-result person-object="person" formatted-person-function="formattedPerson(aperson)"></search-result>
+<search-result person-object="person" formatted-person-function="formattedPerson(aperson)"
+               ng-repeat="person in people"></search-result>
 
